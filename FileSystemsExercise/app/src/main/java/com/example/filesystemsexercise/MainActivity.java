@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String nome = edtNome.getText().toString()+"\n";
                 String sobrenome = edtSobrenome.getText().toString();
-                String nome = edtNome.getText().toString();
                 try{
                     FileOutputStream fileOutputStream = openFileOutput("usuarios",MODE_PRIVATE);
                     fileOutputStream.write(nome.getBytes());
