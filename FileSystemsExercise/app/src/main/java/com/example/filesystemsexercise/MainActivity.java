@@ -2,6 +2,7 @@ package com.example.filesystemsexercise;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                     fileOutputStream.flush();
 
                     Toast.makeText(MainActivity.this, "Usuário salvo com sucesso", Toast.LENGTH_LONG).show();
+
+                    startActivity(new Intent(MainActivity.this, VisualizaDadosActivity.class));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
